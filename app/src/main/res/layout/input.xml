@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ViewTop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Details:"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="Name"
+        android:importantForAutofill="yes"
+        android:hint="Employee Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1"/>
+    <RadioGroup
+        android:id="@+id/Role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="yes"
+
+        app:layout_constraintStart_toStartOf="@id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
+        <RadioButton
+            android:id="@+id/HR"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="HUMAN RESOURCE"/>
+        <RadioButton
+            android:id="@+id/Sec"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SECURITY"/>
+        <RadioButton
+            android:id="@+id/Tech"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="TECHNOLOGY"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/Bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:hint="Employee biography"
+        app:layout_constraintStart_toStartOf="@id/Role"
+        app:layout_constraintTop_toBottomOf="@+id/Role"/>
+    <TextView
+        android:id="@+id/Gender_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        app:layout_constraintStart_toStartOf="@id/Bio"
+        app:layout_constraintTop_toBottomOf="@+id/Bio"/>
+    <RadioGroup
+        android:id="@+id/Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="yes"
+
+        app:layout_constraintStart_toStartOf="@id/Gender_place"
+        app:layout_constraintTop_toBottomOf="@+id/Gender_place">
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Male"/>
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Female"/>
+        <RadioButton
+            android:id="@+id/Others"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Others"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/URL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:hint="Employee Image"
+        app:layout_constraintStart_toStartOf="@id/Gender"
+        app:layout_constraintTop_toBottomOf="@+id/Gender"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/URL"
+        app:layout_constraintTop_toBottomOf="@+id/URL">
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/button_ok"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="OK" />
+    </TableRow>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
